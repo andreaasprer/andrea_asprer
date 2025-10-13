@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import { Typist } from "./typist";
 
 export const Hero = () => {
   return (
@@ -7,9 +8,7 @@ export const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* left column */}
           <div className="flex flex-col justify-center">
-            <h1 className="text-3xl font-semibold leading-none tracking-normal mb-3 text-white md:text-4xl lg:text-5xl">
-              hi, <span className="text-orange-500"> andrea </span> here.
-            </h1>
+            <Typist />
             <h2 className="text-lg font-medium leading-none tracking-normal mb-2 text-white md:text-lg lg:text-xl">
               I build things sometimes
             </h2>
