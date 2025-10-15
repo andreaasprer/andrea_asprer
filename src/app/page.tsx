@@ -2,16 +2,23 @@ import Image from "next/image";
 import { NavBar } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { SideNav } from "@/components/sideNav";
+import { AboutMe } from "@/components/aboutMe";
+import { Projects } from "@/components/projects";
 
 export default function Home() {
   return (
     <div>
       <NavBar />
-      <Hero />
+      <section id="home">
+        <Hero />
+      </section>
       <SideNav />
-      <div>
-        <h1>About Me</h1>
-      </div>
+      <section id="about">
+        <AboutMe />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
     </div>
     // <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
     //   <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">

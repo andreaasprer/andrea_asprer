@@ -4,7 +4,7 @@ import { Typist } from "./typist";
 export const Hero = () => {
   return (
     <div className="min-h-screen text-white flex items-center">
-      <div className="mx-12 my-5 px-6 py-2 md:mx-30 lg:mx-30">
+      <div className="mx-13 my-5 px-6 py-2 md:mx-30 lg:mx-30">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* left column */}
           <div className="flex flex-col justify-center">
