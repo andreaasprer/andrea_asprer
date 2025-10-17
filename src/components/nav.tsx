@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin } from "lucide-react";
 export const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-background text-foreground">
-      <div className="mx-5 my-5 px-6 py-2 lg:mx-30">
+      <div className="mx-5 my-2 px-6 py-2 lg:mx-30">
         <div className="flex justify-between items-center">
           {/* Logo/Name */}
           <Link

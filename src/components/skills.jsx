@@ -14,12 +14,12 @@ export const Skills = () => {
     ]
 
     return (
-        <div className="py-8">
+        <div className="py-2">
             <h2 className="font-normal tracking-[3] mb-4 lg:text-xl">
                 MY SKILLS
             </h2>
             <div className="bg-zinc-700 rounded-xl p-8">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 gap-y-6">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-x-2 gap-y-6">
                     {skills.map((skill, index) => {
                         return (
                             <div key={index} className="flex flex-col items-center gap-4">
