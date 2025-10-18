@@ -32,7 +32,7 @@ export const Projects = () => {
     return (
         <div className="min-h-screen flex flex-col">
             <div className="mx-13 my-5 px-6 py-2 md:mx-30 lg:mx-30">
-                <div className="flex items-center gap-4 mb-5">
+                <div className="flex items-center gap-4 mb-2">
                     <h1 className="text-2xl font-semibold leading-none tracking-normal md:text-3xl lg:text-4xl whitespace-nowrap">
                         / projects
                     </h1>
@@ -41,8 +41,8 @@ export const Projects = () => {
 
                 {/* scrollable container */}
                 <div className="relative">
-                    <div className="overflow-x-auto overflow-y-hidden pb-6 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-neutral-800">
-                        <div className='flex gap-6 px-1'>
+                    <div className="overflow-x-auto overflow-y-hidden pb-3 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-neutral-800">
+                        <div className='flex gap-8 px-1'>
                             {projectsData.map((project) => (
                                 <ProjectCard key={project.id} project={project} />
                             ))}

@@ -2,7 +2,7 @@ import { ExternalLink, Github } from 'lucide-react';
 
 export const ProjectCard = ({ project }) => {
   return (
-    <div className="flex-shrink-0 w-80 md:w-85 bg-neutral-800 rounded-lg overflow-hidden border border-neutral-700 hover:border-orange-500 transition-all duration-300 group flex flex-col">
+    <div className="flex-shrink-0 w-80 mt-5 md:w-85 bg-neutral-800 rounded-md overflow-hidden border border-neutral-700 hover:border-neutral-500 hover:shadow-[0_0_10px_2px] hover:shadow-orange-500/20 transition-all duration-300 group flex flex-col">
       {/* Image Container */}
       <div className="relative h-48 bg-neutral-700 overflow-hidden">
         <img 
