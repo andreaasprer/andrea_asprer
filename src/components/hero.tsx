@@ -1,10 +1,41 @@
+"use client";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import { Mail } from "lucide-react";
 import { Typist } from "./typist";
+import { Stage } from "@react-three/drei";
+import { Avatar } from "@/components/avatar";
 
 export const Hero = () => {
   return (
-    <div className="min-h-screen text-white flex items-center">
-      <div className="mx-13 my-5 px-6 py-2 md:mx-30 lg:mx-30">
+    <div className="relative min-h-screen text-white flex items-center">
+      {/* 3D Canvas - positioned fixed to cover entire viewport */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <Canvas
+          camera={{
+            fov: 50,
+          }}
+          shadows
+        >
+          <Suspense fallback={null}>
+            <Stage
+              adjustCamera={false}
+              intensity={1}
+              center={{ disable: true }}
+              shadows={false}
+            >
+              <Avatar
+                position={[2, -0.6, 0]}
+                rotation={[0, -Math.PI / 16, 0]}
+                scale={1.2}
+              />
+            </Stage>
+          </Suspense>
+        </Canvas>
+      </div>
+
+      {/* Content layer - positioned above canvas with pointer events enabled */}
+      <div className="relative z-10 mx-13 my-5 px-6 py-2 md:mx-30 lg:mx-30 w-full pointer-events-none">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* left column */}
           <div className="flex flex-col justify-center">
@@ -18,7 +49,7 @@ export const Hero = () => {
               a passion for all things technology from fullstack development to
               AI.
             </p>
-            <div>
+            <div className="pointer-events-auto">
               <a
                 href="mailto:asprer.andreaa@gmail.com"
                 target="_blank"
@@ -34,11 +65,6 @@ export const Hero = () => {
                 </button>
               </a>
             </div>
-          </div>
-
-          <div className="bg-background">
-            {/* right column */}
-            <h1>placeholder</h1>
           </div>
         </div>
       </div>
