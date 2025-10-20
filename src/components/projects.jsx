@@ -41,7 +41,15 @@ export const Projects = () => {
 
                 {/* scrollable container */}
                 <div className="relative">
-                    <div className="overflow-x-auto overflow-y-hidden pb-3 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-neutral-800">
+                    {/* mobile container : stack projects vertically */}
+                    <div className="flex flex-col items-center gap-6 md:hidden">
+                            {projectsData.map((project) => (
+                                <ProjectCard key={project.id} project={project} />
+                            ))}
+                    </div>
+                    
+                    {/* medium and large viewports */}
+                    <div className="hidden md:block overflow-x-auto overflow-y-hidden pb-3 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-neutral-800">
                         <div className='flex gap-8 px-1'>
                             {projectsData.map((project) => (
                                 <ProjectCard key={project.id} project={project} />
