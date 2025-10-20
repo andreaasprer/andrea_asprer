@@ -1,12 +1,26 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github } from "lucide-react";
+import { string } from "three/tsl";
 
-export const ProjectCard = ({ project }) => {
+interface Project {
+  image: string;
+  title: string;
+  description: string;
+  tags?: string[];
+  github: string;
+  demo?: string;
+}
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="flex-shrink-0 w-80 mt-5 md:w-85 bg-neutral-800 rounded-md overflow-hidden border border-neutral-700 hover:border-neutral-500 hover:shadow-[0_0_10px_2px] hover:shadow-orange-500/20 transition-all duration-300 group flex flex-col">
       {/* Image Container */}
       <div className="relative h-48 bg-neutral-700 overflow-hidden">
-        <img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
@@ -18,7 +32,7 @@ export const ProjectCard = ({ project }) => {
         <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-500 transition-colors">
           {project.title}
         </h3>
-        
+
         <p className="text-neutral-400 text-sm leading-relaxed mb-4">
           {project.description}
         </p>
@@ -27,7 +41,7 @@ export const ProjectCard = ({ project }) => {
         {project.tags && (
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tags.map((tag, index) => (
-              <span 
+              <span
                 key={index}
                 className="text-xs px-2 py-1 bg-neutral-700 text-white rounded"
               >
@@ -38,7 +52,7 @@ export const ProjectCard = ({ project }) => {
         )}
 
         <div className="flex gap-3 pt-4 border-t border-neutral-700 mt-auto">
-          <a 
+          <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -47,9 +61,9 @@ export const ProjectCard = ({ project }) => {
             <Github size={16} />
             GitHub
           </a>
-          
+
           {project.demo && (
-            <a 
+            <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
