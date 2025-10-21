@@ -5,11 +5,10 @@ import { SkeletonUtils } from "three-stdlib";
 import * as THREE from "three";
 
 export const Avatar = (props) => {
-  const group = useRef();
-
-  const { scene } = useGLTF("models/chibi.glb");
-  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
-  const { nodes, materials } = useGraph(clone);
+  const group = React.useRef()
+  const { scene } = useGLTF('models/andrea_chibi.glb')
+  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
+  const { nodes, materials } = useGraph(clone)
 
   const { animations: standingAnimation } = useFBX("animations/idle.fbx");
   const { animations: helloAnimation } = useFBX("animations/hello.fbx");
@@ -26,18 +25,22 @@ export const Avatar = (props) => {
   useFrame((state) => {
     const target = new THREE.Vector3(
       state.pointer.x * 3,
-      state.pointer.y * 2,
+      state.pointer.y,
       1
     );
-    group.current.getObjectByName("Head").lookAt(target);
+    group.current.getObjectByName("Neck").lookAt(target);
   });
 
   useEffect(() => {
+    if (!actions || !actions["Hello"] || !actions["Standing"]) {
+      return;
+    }
+
     const helloAction = actions["Hello"];
     const idleAction = actions["Standing"];
 
     // hello animation once
-    helloAction.reset().setLoop(THREE.LoopOnce, 1).play();
+    helloAction.reset().setLoop(THREE.LoopRepeat, 2).play();
     helloAction.clampWhenFinished = true; // hold on last frame
 
     const mixer = helloAction.getMixer();
@@ -55,51 +58,29 @@ export const Avatar = (props) => {
     return () => {
       mixer.removeEventListener("finished", onFinished);
     };
-  }, [actions]);
-
+  }, [actions]); // Added actions to dependency array
+  
   return (
     <group {...props} ref={group} dispose={null}>
       <group>
         <primitive object={nodes.Hips} />
-        <skinnedMesh
-          geometry={nodes.body.geometry}
-          material={materials.mini_material}
-          skeleton={nodes.body.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.head.geometry}
-          material={materials.mini_material}
-          skeleton={nodes.head.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.cap_1.geometry}
-          material={materials.mini_material}
-          skeleton={nodes.cap_1.skeleton}
-        />
-        <skinnedMesh
-          geometry={nodes.cap_2.geometry}
-          material={materials.mini_material_secondary}
-          skeleton={nodes.cap_2.skeleton}
-        />
-        <skinnedMesh
-          name="eyes_1"
-          geometry={nodes.eyes_1.geometry}
-          material={materials.mini_material}
-          skeleton={nodes.eyes_1.skeleton}
-          morphTargetDictionary={nodes.eyes_1.morphTargetDictionary}
-          morphTargetInfluences={nodes.eyes_1.morphTargetInfluences}
-        />
-        <skinnedMesh
-          name="eyes_2"
-          geometry={nodes.eyes_2.geometry}
-          material={materials.mini_material_secondary}
-          skeleton={nodes.eyes_2.skeleton}
-          morphTargetDictionary={nodes.eyes_2.morphTargetDictionary}
-          morphTargetInfluences={nodes.eyes_2.morphTargetInfluences}
-        />
+        <skinnedMesh geometry={nodes.body.geometry} material={materials.base_material_primary} skeleton={nodes.body.skeleton} />
+        <skinnedMesh geometry={nodes.hair_07.geometry} material={materials.base_material_primary} skeleton={nodes.hair_07.skeleton} />
+        <skinnedMesh geometry={nodes.pants_01.geometry} material={materials.base_material_primary} skeleton={nodes.pants_01.skeleton} />
+        <skinnedMesh geometry={nodes.shirt_05.geometry} material={materials.base_material_primary} skeleton={nodes.shirt_05.skeleton} />
+        <skinnedMesh geometry={nodes.eyes_01_1.geometry} material={materials.base_material_primary} skeleton={nodes.eyes_01_1.skeleton} />
+        <skinnedMesh geometry={nodes.eyes_01_2.geometry} material={materials.base_material_secondary} skeleton={nodes.eyes_01_2.skeleton} />
+        <skinnedMesh geometry={nodes.shoes_02_1.geometry} material={materials.base_material_primary} skeleton={nodes.shoes_02_1.skeleton} />
+        <skinnedMesh geometry={nodes.shoes_02_2.geometry} material={materials.base_material_secondary} skeleton={nodes.shoes_02_2.skeleton} />
+        <skinnedMesh geometry={nodes.shoes_02_3.geometry} material={materials.base_material_tertiary} skeleton={nodes.shoes_02_3.skeleton} />
+        <skinnedMesh geometry={nodes.socks_02_1.geometry} material={materials.base_material_primary} skeleton={nodes.socks_02_1.skeleton} />
+        <skinnedMesh geometry={nodes.socks_02_2.geometry} material={materials.base_material_secondary} skeleton={nodes.socks_02_2.skeleton} />
+        <skinnedMesh geometry={nodes.watch_02_1.geometry} material={materials.base_material_primary} skeleton={nodes.watch_02_1.skeleton} />
+        <skinnedMesh geometry={nodes.watch_02_2.geometry} material={materials.base_material_secondary} skeleton={nodes.watch_02_2.skeleton} />
+        <skinnedMesh geometry={nodes.watch_02_3.geometry} material={materials.base_material_tertiary} skeleton={nodes.watch_02_3.skeleton} />
       </group>
     </group>
-  );
-};
+  )
+}
 
-useGLTF.preload("models/chibi.glb");
+useGLTF.preload('/andrea_chibi.glb')

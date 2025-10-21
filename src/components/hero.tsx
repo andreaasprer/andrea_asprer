@@ -27,7 +27,7 @@ export const Hero = () => {
               <Avatar
                 position={[2, -0.6, 0]}
                 rotation={[0, -Math.PI / 16, 0]}
-                scale={1.2}
+                scale={1.1}
               />
             </Stage>
           </Suspense>
