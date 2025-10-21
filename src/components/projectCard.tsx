@@ -1,5 +1,4 @@
 import { ExternalLink, Github } from "lucide-react";
-import { string } from "three/tsl";
 
 interface Project {
   image: string;
