@@ -44,10 +44,10 @@ export const Hero = () => {
               I build things sometimes
             </h2>
             <p className="text-sm font-light leading-5 tracking-wide mb-3 text-white md:text-2sm lg:text-base">
-              I'm an aspiring software engineer from Los Angeles, California. I
-              am currently a student at UCLA, studying Computer Science. I have
-              a passion for all things technology from fullstack development to
-              AI.
+              {"I'm an aspiring"} software engineer from Los Angeles,
+              California. I am currently a student at UCLA, studying Computer
+              Science. I have a passion for all things technology from fullstack
+              development to AI.
             </p>
             <div className="pointer-events-auto">
               <a
