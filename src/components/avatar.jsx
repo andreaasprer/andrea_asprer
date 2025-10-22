@@ -39,7 +39,7 @@ export const Avatar = (props) => {
     const helloAction = actions["Hello"];
     const idleAction = actions["Standing"];
 
-    // hello animation once
+    // hello animation twice
     helloAction.reset().setLoop(THREE.LoopRepeat, 2).play();
     helloAction.clampWhenFinished = true; // hold on last frame
 
@@ -82,5 +82,3 @@ export const Avatar = (props) => {
     </group>
   )
 }
-
-useGLTF.preload('/andrea_chibi.glb')
