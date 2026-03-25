@@ -3,6 +3,16 @@ import { ProjectCard } from "@/components/projectCard";
 const projectsData = [
   {
     id: 1,
+    title: "Freshly",
+    description:
+      "A web app that helps households reduce food waste by turning grocery receipt photos into a tracked inventory, automatically parsing items, estimating expiration dates, and alerting users before food goes bad. Built with 4 other incredible teammates.",
+    image: "/images/freshly.png",
+    github: "https://github.com/tanisha-ag/Freshly",
+    demo: "https://freshly-nine.vercel.app/",
+    tags: ["React", "TypeScript", "Supabase"],
+  },
+  {
+    id: 2,
     title: "SpeechLab",
     description:
       "A full-stack web application to help users with public speaking through real-time AI powered feedback",
@@ -12,7 +22,7 @@ const projectsData = [
     tags: ["React", "PyTorch", "FastAPI", "Speechmatics API"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Byte-to-Bite",
     description:
       "A full-stack web application to provide users a list of yummy recipes given what ingredients they have in their pantry. Built with a group of 5 talented teammates.",
@@ -21,7 +31,7 @@ const projectsData = [
     tags: ["React", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Squirrel Surfers",
     description:
       "A UCLA-theme runner game built with Three.js featuring a squirrel navigating through Bruinwalk. Developed with an awesome team of 3 students.",
