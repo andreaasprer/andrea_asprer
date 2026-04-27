@@ -2,6 +2,16 @@ import { ProjectCard } from "@/components/projectCard";
 
 const projectsData = [
   {
+    id: 0,
+    title: "StoryWorld",
+    description: 
+      "StoryWorld turns a child's imagination into a personalized illustrated storybook in seconds. Powered by AI, the app generates custom narratives and matching artwork from a simple text prompt. I led backend development, designing the API architecture and building the image generation pipeline end-to-end. StoryWorld was built at a hackathon in 6 hours with an passionate team of 3.",
+    image: "/images/storyworld.png",
+    github: "https://github.com/SohailGidwani/storyteller",
+    demo: "https://devpost.com/software/storyworld",
+    tags: ["Next.js", "TypeScript", "Claude API", "Nanobanana API", "Supabase"]
+  },
+  {
     id: 1,
     title: "Freshly",
     description:
