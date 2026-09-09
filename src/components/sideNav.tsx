@@ -88,14 +88,14 @@ export const SideNav = () => {
                   <li key={item.id}>
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`group flex items-center justify-end gap-4 text-neutral-300 hover:text-white transition-all duration-200 ease-out ${
+                      className={`group flex items-center justify-end gap-4 text-muted-subtle hover:text-white transition-all duration-200 ease-out ${
                         isScrolling ? "opacity-0" : "opacity-100"
                       }`}
                     >
                       <span className="text-sm font-medium tracking-wide">
                         {item.name}
                       </span>
-                      <span className="h-[1.5px] w-12 bg-neutral-300 group-hover:bg-white group-hover:w-20  transition-all duration-500 ease-in-out"></span>
+                      <span className="h-[1.5px] w-12 bg-muted-subtle group-hover:bg-white group-hover:w-20  transition-all duration-500 ease-in-out"></span>
                     </button>
                   </li>
                 ))}

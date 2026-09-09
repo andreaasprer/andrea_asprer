@@ -10,7 +10,7 @@ export const Typist = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "hi, <span class='text-orange-500'>andrea</span> here.",
+        "hi, <span class='text-accent'>andrea</span> here.",
       ],
       typeSpeed: 45,
       showCursor: true,

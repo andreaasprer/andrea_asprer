@@ -59,7 +59,7 @@ export const Projects = () => {
           <h2 className="text-2xl font-semibold leading-none tracking-normal md:text-3xl lg:text-4xl whitespace-nowrap">
             / projects
           </h2>
-          <div className="flex-1 h-px bg-orange-500"></div>
+          <div className="flex-1 h-px bg-accent"></div>
         </div>
 
         {/* scrollable container */}
@@ -72,7 +72,7 @@ export const Projects = () => {
           </div>
 
           {/* medium and large viewports */}
-          <div className="hidden md:block overflow-x-auto overflow-y-hidden pb-3 scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-neutral-800">
+          <div className="hidden md:block overflow-x-auto overflow-y-hidden pb-3 scrollbar-thin scrollbar-thumb-accent scrollbar-track-surface">
             <div className="flex gap-8 px-1">
               {projectsData.map((project) => (
                 <ProjectCard key={project.id} project={project} />

@@ -8,14 +8,14 @@ export const AboutMe = () => {
           <h2 className="text-2xl font-semibold leading-none tracking-normal md:text-3xl lg:text-4xl whitespace-nowrap">
             / about me
           </h2>
-          <div className="flex-1 h-px bg-orange-500"></div>
+          <div className="flex-1 h-px bg-accent"></div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-40">
           <p>
             I am currently pursuing a{" "}
             <span className="font-bold">Bachelor of Science</span> in
             <span className="font-bold"> Computer Science</span> at{" "}
-            <span className="font-bold text-orange-500">UCLA</span>. I enjoy
+            <span className="font-bold text-accent">UCLA</span>. I enjoy
             developing my skills through personal projects and expanding my
             knowledge of software development. Outside the classroom, I compete
             in hackathons and enjoy teaching programming to others. In my free

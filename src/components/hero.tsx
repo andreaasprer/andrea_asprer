@@ -56,8 +56,8 @@ export const Hero = () => {
                 rel="noopener noreferrer"
               >
                 <button
-                  className="inline-flex items-center justify-center px-2 py-4 w-40 bg-background border-2 ease-in-out delay-75 hover:bg-orange-700 hover:text-white hover:border-orange-700
-                                text-orange-500 text-sm font-bold tracking-wide rounded-md hover:-translate-y-1 hover:scale-105 active:scale-95
+                  className="inline-flex items-center justify-center px-2 py-4 w-40 bg-background border-2 ease-in-out delay-75 hover:bg-accent-hover hover:text-white hover:border-accent-hover
+                                text-accent text-sm font-bold tracking-wide rounded-md hover:-translate-y-1 hover:scale-105 active:scale-95
                                 transition-all duration-200"
                 >
                   <Mail className="mr-3" size={23} />

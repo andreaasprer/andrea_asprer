@@ -21,7 +21,7 @@ export const NavBar = () => {
               href="mailto:asprer.andreaa@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-500 transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="Email"
             >
               <Mail />
@@ -30,7 +30,7 @@ export const NavBar = () => {
               href="https://github.com/andreaasprer"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-500 transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="GitHub"
             >
               <Github />
@@ -39,7 +39,7 @@ export const NavBar = () => {
               href="https://www.linkedin.com/in/andrea-asprer-366444325/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-orange-500 transition-colors"
+              className="text-white hover:text-accent transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin />
