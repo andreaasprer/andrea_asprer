@@ -8,8 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Andrea Asprer - Portfolio",
-  description: "Software Engineer from Los Angeles, CA",
+  title: "Andrea Asprer | Software Engineer Portfolio",
+  description:
+    "Andrea Asprer is a software engineer and Computer Science student at UCLA, based in Los Angeles, CA, building full-stack web applications and AI-powered projects.",
 };
 
 export default function RootLayout({

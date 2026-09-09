@@ -5,9 +5,9 @@ export const AboutMe = () => {
     <div className="min-h-screen flex flex-col items-center">
       <div className="mx-13 my-5 px-6 py-2 md:mx-30 lg:mx-30">
         <div className="flex items-center gap-4 mb-5">
-          <h1 className="text-2xl font-semibold leading-none tracking-normal md:text-3xl lg:text-4xl whitespace-nowrap">
+          <h2 className="text-2xl font-semibold leading-none tracking-normal md:text-3xl lg:text-4xl whitespace-nowrap">
             / about me
-          </h1>
+          </h2>
           <div className="flex-1 h-px bg-orange-500"></div>
         </div>
         <div className="flex flex-col-reverse lg:flex-row gap-5 lg:gap-40">

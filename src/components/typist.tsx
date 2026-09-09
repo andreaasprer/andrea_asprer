@@ -9,7 +9,9 @@ export const Typist = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["hi, <span class='text-orange-500'>andrea</span> here."],
+      strings: [
+        "hi, <span class='text-orange-500'>andrea</span> here.",
+      ],
       typeSpeed: 45,
       showCursor: true,
       cursorChar: "|",
@@ -23,8 +25,8 @@ export const Typist = () => {
   }, []);
 
   return (
-    <div className="text-3xl font-semibold leading-none tracking-normal mb-3 md:text-4xl lg:text-5xl">
+    <h1 className="text-3xl font-semibold leading-none tracking-normal mb-3 md:text-4xl lg:text-5xl">
       <span ref={el} />
-    </div>
+    </h1>
   );
 };
