@@ -28,7 +28,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
 
       {/* Content */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-accent transition-colors">
+        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
           {project.title}
         </h3>
 
@@ -42,7 +42,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.tags.map((tag, index) => (
               <span
                 key={index}
-                className="text-xs px-2 py-1 bg-surface-muted text-white rounded"
+                className="text-xs px-2 py-1 bg-surface-muted text-foreground rounded"
               >
                 {tag}
               </span>

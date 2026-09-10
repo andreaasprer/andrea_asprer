@@ -1,6 +1,7 @@
 // components/Navbar.jsx
 import Link from "next/link";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { ThemeToggle } from "@/components/themeToggle";
 
 export const NavBar = () => {
   return (
@@ -10,7 +11,7 @@ export const NavBar = () => {
           {/* Logo/Name */}
           <Link
             href="/"
-            className="text-white text-l font-semibold tracking-wide"
+            className="text-foreground text-l font-semibold tracking-wide"
           >
             Andrea Asprer
           </Link>
@@ -21,7 +22,7 @@ export const NavBar = () => {
               href="mailto:asprer.andreaa@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
               aria-label="Email"
             >
               <Mail />
@@ -30,7 +31,7 @@ export const NavBar = () => {
               href="https://github.com/andreaasprer"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
               aria-label="GitHub"
             >
               <Github />
@@ -39,11 +40,12 @@ export const NavBar = () => {
               href="https://www.linkedin.com/in/andrea-asprer-366444325/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-accent transition-colors"
+              className="text-foreground hover:text-accent transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin />
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </div>

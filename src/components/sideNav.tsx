@@ -56,7 +56,7 @@ export const SideNav = () => {
             {/* vertical line w/ animation */}
             <div className="flex-1 flex justify-center mt-2">
               <span
-                className={`h-12 w-px bg-white transition-all duration-500 ease-in-out ${
+                className={`h-12 w-px bg-foreground transition-all duration-500 ease-in-out ${
                   isScrolling
                     ? "translate-y-[180%] opacity-0"
                     : "translate-y-0 opacity-100"
@@ -74,28 +74,28 @@ export const SideNav = () => {
                 <li key="home">
                   <button
                     onClick={() => scrollToSection("home")}
-                    className={`group flex items-center justify-end gap-4 text-white transition-all duration-200 ease-out ${
+                    className={`group flex items-center justify-end gap-4 text-foreground transition-all duration-200 ease-out ${
                       isScrolling ? "opacity-0" : "opacity-100"
                     }`}
                   >
                     <span className="text-sm font-medium tracking-wide">
                       Home
                     </span>
-                    <span className="h-[1.5px] w-20 bg-white"></span>
+                    <span className="h-[1.5px] w-20 bg-foreground"></span>
                   </button>
                 </li>
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`group flex items-center justify-end gap-4 text-muted-subtle hover:text-white transition-all duration-200 ease-out ${
+                      className={`group flex items-center justify-end gap-4 text-muted-subtle hover:text-foreground transition-all duration-200 ease-out ${
                         isScrolling ? "opacity-0" : "opacity-100"
                       }`}
                     >
                       <span className="text-sm font-medium tracking-wide">
                         {item.name}
                       </span>
-                      <span className="h-[1.5px] w-12 bg-muted-subtle group-hover:bg-white group-hover:w-20  transition-all duration-500 ease-in-out"></span>
+                      <span className="h-[1.5px] w-12 bg-muted-subtle group-hover:bg-foreground group-hover:w-20  transition-all duration-500 ease-in-out"></span>
                     </button>
                   </li>
                 ))}

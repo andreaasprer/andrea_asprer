@@ -8,7 +8,7 @@ import { Avatar } from "@/components/avatar";
 
 export const Hero = () => {
   return (
-    <div className="relative min-h-screen text-white flex items-center">
+    <div className="relative min-h-screen text-foreground flex items-center">
       {/* 3D Canvas - positioned fixed to cover entire viewport */}
       <div className="hidden lg:flex absolute inset-0 z-0 pointer-events-none">
         <Canvas
@@ -40,10 +40,10 @@ export const Hero = () => {
           {/* left column */}
           <div className="flex flex-col justify-center items-center text-center md:items-start md:text-left">
             <Typist />
-            <h2 className="text-lg font-medium leading-none tracking-normal mb-2 text-white md:text-lg lg:text-xl">
+            <h2 className="text-lg font-medium leading-none tracking-normal mb-2 text-foreground md:text-lg lg:text-xl">
               I build things sometimes
             </h2>
-            <p className="text-sm font-light leading-5 tracking-wide mb-3 text-white md:text-2sm lg:text-base">
+            <p className="text-sm font-light leading-5 tracking-wide mb-3 text-foreground md:text-2sm lg:text-base">
               {"I'm an aspiring"} software engineer from Los Angeles,
               California. I am currently a student at UCLA, studying Computer
               Science. I have a passion for all things technology from fullstack
